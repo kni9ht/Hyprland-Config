@@ -1,4 +1,4 @@
-<h1 align="center">Hyprland on ArcoLinux</h1>
+<h1 align="center">Hyprland on Arch</h1>
 
 <h3 align=center>Note: Previous layout can be found on master branch</h3>
 
