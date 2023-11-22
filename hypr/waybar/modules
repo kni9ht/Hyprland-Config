@@ -3,21 +3,29 @@
     "interval": 30,
     "align": 0,
     "rotate": 0,
-      "format": "<span font='13' rise='1500'>{icon}</span> {percent}",
+      "format": "<span font='13' rise='1000'>{icon}</span> {percent}",
       "format-icons": ["", "", "", ""],
       "on-scroll-up": "~/.config/hypr/scripts/brightness --inc",
       "on-scroll-down": "~/.config/hypr/scripts/brightness --dec",
       "smooth-scrolling-threshold": 1,
     },
 
-  "wlr/workspaces": {
-    "format": "{}",
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "format-icons": {
+		  "1": "",
+		  "2": "",
+		  "3": "",
+		  "4": "",
+		  "5": "",
+		},
+		"format-fallback": "{name}",
     "on-click": "activate",
     "all-outputs": true,
     "sort-by-number": true,
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
-  },
+  }, 
 
   "battery": {
     "interval": 60,
@@ -31,7 +39,7 @@
       "critical": 15
     },
     "format": "<span font='13' rise='1000'>{icon} </span> {capacity}",
-    "format-charging": "<span font='13' rise='1000'> </span> {capacity}",
+    "format-charging": "<span font='13' rise='1000'></span> {capacity}",
     "format-plugged": "<span font='13' rise='1300'> </span> {capacity}",
     "format-full": "<span font='13' rise='500'>{icon}</span>",
     "format-alt": "<span font='13' rise='1000'>{icon} </span> {time}",
@@ -45,8 +53,8 @@
     "interval": 60,
     "align": 0,
     "rotate": 0,
-    "format": "{:%d %b <span rise='1000'>⁙</span> %I:%M %p}",
-    "format-alt": "{:%A <span rise='1000'>⁙</span> %d %B %Y <span rise='1000'>⁙</span> %I:%M %p}",
+    "format": "{:%A <span rise='1000'>⁙</span> %d %B %Y <span rise='1000'>⁙</span> %I:%M %p}",
+    "format-alt": "{:%d %b <span rise='1000'>⁙</span> %I:%M %p}",
     "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
     "on-click-right": "~/.config/hypr/scripts/changeWallpaper",
   },
@@ -179,8 +187,8 @@
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
-      "activated": "<span color='#f38ba8'></span>",
-      "deactivated": ""
+      "activated": "<span color='#f38ba8'> </span>",
+      "deactivated": " "
     },
     /* "timeout": 30.5 */
   },
